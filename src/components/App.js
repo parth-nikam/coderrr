@@ -1,3 +1,5 @@
+// src/components/App.js
+
 import React, { useState, useEffect } from 'react';
 import Editor from './Editor';
 import useLocalStorage from '../hooks/useLocalStorage';
@@ -34,6 +36,11 @@ function App() {
           setHtml(sampleHtml);
           setCss(sampleCss);
           setJs(sampleJs);
+        }}
+        clearEditors={() => {
+          setHtml('');
+          setCss('');
+          setJs('');
         }}
       />
       <div className="pane top-pane">
