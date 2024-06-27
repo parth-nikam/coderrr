@@ -57,3 +57,23 @@ body {
     border-bottom-left-radius: .5rem;
     overflow: hidden;
   }
+
+  .header {
+    background-color: hsl(225, 6%, 13%);
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid hsl(225, 6%, 20%);
+  }
+  
+  .header h1 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .header p {
+    font-size: 1.2rem;
+    opacity: 0.8;
+  }
+  
