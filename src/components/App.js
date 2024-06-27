@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Editor from './Editor';
 import useLocalStorage from '../hooks/useLocalStorage';
+import TrySampleButton from './TrySampleButton';
 
 function App() {
   const [html, setHtml] = useLocalStorage('html', '');
@@ -28,6 +29,13 @@ function App() {
         <h1>Coder</h1>
         <p>The Live Code Editor of HTML CSS JS</p>
       </header>
+      <TrySampleButton
+        loadSampleCode={(sampleHtml, sampleCss, sampleJs) => {
+          setHtml(sampleHtml);
+          setCss(sampleCss);
+          setJs(sampleJs);
+        }}
+      />
       <div className="pane top-pane">
         <Editor
           language="xml"
