@@ -35,8 +35,8 @@ function App() {
   return (
     <>
       <header className="header">
-        <h1>Coder</h1>
-        <p>The Live Code Editor of HTML CSS JS</p>
+        <h1>Coderrr</h1>
+        <p>The Live Code Editor of HTML CSS JS - Parth Nikam</p>
       </header>
       <div className="try-sample">
         <TrySampleButton loadSampleCode={(sampleHtml, sampleCss, sampleJs) => {
