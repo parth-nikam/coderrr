@@ -55,6 +55,7 @@ body {
 .pane {
   height: 50vh;
   display: flex;
+  background-color: hsl(225, 6%, 25%);
 }
 
 .top-pane {

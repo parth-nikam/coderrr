@@ -35,7 +35,7 @@ const TrySampleButton = ({ loadSampleCode }) => {
     const sampleCss = `
       body {
         font-family: Arial, sans-serif;
-        background-color: #f0f0f0;
+        background-color: hsl(225, 6%, 25%);
         padding: 1rem;
       }
 
