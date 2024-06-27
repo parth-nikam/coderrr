@@ -12,14 +12,8 @@ const TrySampleButton = ({ loadSampleCode }) => {
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Sample Live Code Editor</title>
         <link rel="stylesheet" href="styles.css">
-        <style>${sampleCss}</style>
       </head>
       <body>
-        <header class="header">
-          <h1>Coder</h1>
-          <p>The Live Code Editor of HTML CSS JS</p>
-        </header>
-
         <div class="content">
           <div class="box" id="box">
             <p>This box will change color</p>
@@ -27,7 +21,13 @@ const TrySampleButton = ({ loadSampleCode }) => {
           <button onclick="changeColor()" class="clear-button">Change Color</button>
         </div>
 
-        <script>${sampleJs}</script>
+        <script>
+          function changeColor() {
+            const box = document.getElementById('box');
+            const randomColor = '#' + Math.floor(Math.random()*16777215).toString(16);
+            box.style.backgroundColor = randomColor;
+          }
+        </script>
       </body>
       </html>
     `;
@@ -62,19 +62,18 @@ const TrySampleButton = ({ loadSampleCode }) => {
         margin: 0 auto;
       }
 
-      .clear-button {
+      button {
         margin-top: 1rem;
         padding: 0.5rem 1rem;
-        background-color: #c62525;
+        background-color: #333;
         color: white;
         border: none;
         cursor: pointer;
         font-size: 1rem;
-        border-radius: 0.5rem;
       }
 
-      .clear-button:hover {
-        background-color: #a21f1f;
+      button:hover {
+        background-color: #555;
       }
     `;
 
