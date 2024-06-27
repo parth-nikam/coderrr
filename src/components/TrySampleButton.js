@@ -52,7 +52,7 @@ const TrySampleButton = ({ loadSampleCode }) => {
       }
 
       .box {
-        width: 450px;
+        width: 350px;
         height: 200px;
         background-color: coral;
         color: white;
