@@ -60,16 +60,18 @@ const TrySampleButton = ({ loadSampleCode }) => {
         justify-content: center;
         align-items: center;
         margin: 0 auto;
+        border-radius: 1rem;
       }
 
       button {
         margin-top: 1rem;
         padding: 0.5rem 1rem;
-        background-color: #333;
+        background-color: #c62525;
         color: white;
         border: none;
         cursor: pointer;
         font-size: 1rem;
+        border-radius: 0.5rem;
       }
 
       button:hover {
