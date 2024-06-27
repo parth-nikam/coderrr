@@ -2,10 +2,8 @@
 
 import React from "react";
 
-const TrySampleButton = ({ loadSampleCode, clearEditors }) => {
+const TrySampleButton = ({ loadSampleCode }) => {
   const handleLoadSample = () => {
-    clearEditors(); // Clear the editors before loading sample code
-
     const sampleHtml = `
       <!DOCTYPE html>
       <html lang="en">

@@ -37,11 +37,6 @@ function App() {
           setCss(sampleCss);
           setJs(sampleJs);
         }}
-        clearEditors={() => {
-          setHtml('');
-          setCss('');
-          setJs('');
-        }}
       />
       <div className="pane top-pane">
         <Editor
