@@ -4,6 +4,7 @@ import React, { useState, useEffect } from 'react';
 import Editor from './Editor';
 import useLocalStorage from '../hooks/useLocalStorage';
 import TrySampleButton from './TrySampleButton';
+import '../index.css'; // Import your custom styles here
 
 function App() {
   const [html, setHtml] = useLocalStorage('html', '');
@@ -25,19 +26,26 @@ function App() {
     return () => clearTimeout(timeout);
   }, [html, css, js]);
 
+  const clearEditors = () => {
+    setHtml('');
+    setCss('');
+    setJs('');
+  };
+
   return (
     <>
       <header className="header">
         <h1>Coder</h1>
         <p>The Live Code Editor of HTML CSS JS</p>
       </header>
-      <TrySampleButton
-        loadSampleCode={(sampleHtml, sampleCss, sampleJs) => {
+      <div className="try-sample">
+        <TrySampleButton loadSampleCode={(sampleHtml, sampleCss, sampleJs) => {
           setHtml(sampleHtml);
           setCss(sampleCss);
           setJs(sampleJs);
-        }}
-      />
+        }} />
+        <button className="clear-button" onClick={clearEditors}>Clear Editors</button>
+      </div>
       <div className="pane top-pane">
         <Editor
           language="xml"

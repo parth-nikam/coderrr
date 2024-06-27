@@ -12,6 +12,7 @@ const TrySampleButton = ({ loadSampleCode }) => {
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Sample Live Code Editor</title>
         <link rel="stylesheet" href="styles.css">
+        <style>${sampleCss}</style>
       </head>
       <body>
         <header class="header">
@@ -23,16 +24,10 @@ const TrySampleButton = ({ loadSampleCode }) => {
           <div class="box" id="box">
             <p>This box will change color</p>
           </div>
-          <button onclick="changeColor()">Change Color</button>
+          <button onclick="changeColor()" class="clear-button">Change Color</button>
         </div>
 
-        <script>
-          function changeColor() {
-            const box = document.getElementById('box');
-            const randomColor = '#' + Math.floor(Math.random()*16777215).toString(16);
-            box.style.backgroundColor = randomColor;
-          }
-        </script>
+        <script>${sampleJs}</script>
       </body>
       </html>
     `;
@@ -67,18 +62,19 @@ const TrySampleButton = ({ loadSampleCode }) => {
         margin: 0 auto;
       }
 
-      button {
+      .clear-button {
         margin-top: 1rem;
         padding: 0.5rem 1rem;
-        background-color: #333;
+        background-color: #c62525;
         color: white;
         border: none;
         cursor: pointer;
         font-size: 1rem;
+        border-radius: 0.5rem;
       }
 
-      button:hover {
-        background-color: #555;
+      .clear-button:hover {
+        background-color: #a21f1f;
       }
     `;
 
@@ -94,11 +90,8 @@ const TrySampleButton = ({ loadSampleCode }) => {
   };
 
   return (
-    <div className="content">
-      <div className="box" id="box">
-        <p>This box will change color</p>
-      </div>
-      <button onClick={handleLoadSample}>Try Sample</button>
+    <div className="try-sample-content">
+      <button className="clear-button" onClick={handleLoadSample}>Try Sample</button>
     </div>
   );
 };
