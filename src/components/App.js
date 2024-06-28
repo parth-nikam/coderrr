@@ -1,10 +1,8 @@
-// src/components/App.js
-
 import React, { useState, useEffect } from 'react';
 import Editor from './Editor';
 import useLocalStorage from '../hooks/useLocalStorage';
 import TrySampleButton from './TrySampleButton';
-import '../index.css'; // Import your custom styles here
+import '../index.css'; 
 
 function App() {
   const [html, setHtml] = useLocalStorage('html', '');
